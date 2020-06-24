@@ -15,7 +15,7 @@ class WebController extends Controller
 
 
     public function information(){
-        return view("school.new");
+        return view("new");
     }
 
     public function saveInformation(Request $request){
@@ -42,7 +42,7 @@ class WebController extends Controller
     }
 
     public function home(){
-        return view("school.home");
+        return view('home');
     }
 
 }
