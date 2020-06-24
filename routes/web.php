@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,8 +13,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::resource('/studentajax','StudentAjaxController');
+Route::get("/listbook","WebController@listbook");
+Route::get("/searchbook/{title}","WebController@searchbook");
+Route::get("/information","WebController@information");
+Route::post("/saveinformation","WebController@saveInformation");
+Route::get("/home","WebController@home");
